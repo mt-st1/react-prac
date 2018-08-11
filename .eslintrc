@@ -1,5 +1,5 @@
 {
-  "parse": "babel-eslint",
+  "parser": "babel-eslint",
   "plugins": [
     "flowtype",
     "react"
