@@ -9,4 +9,29 @@ module.exports = {
     // 出力ファイル名
     filename: 'bundle.js'
   }
+
+  module: {
+    rules: [
+      {
+        // 拡張子.jsの場合
+        test: /\.js$/,
+        use: [
+          {
+            // Babelを利用
+            loader: 'babel-loader',
+            // Babelのオプションを指定
+            options: {
+              presets: [
+                // envを指定することでES2018をES5に変換
+                // {'modules': false}にしないとimport文が
+                // BabelによってCommonJSに変換され、
+                // webpackのTree Shaking(デッドコードを除去する機能)が使えない
+                ['env', { 'modules': false }]
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
 }
