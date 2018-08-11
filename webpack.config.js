@@ -10,7 +10,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // 出力ファイル名
     filename: 'bundle.js'
-  }
+  },
+
+  // webpackで起動させるサーバの設定
+  devServer: {
+    port: 3000,
+    contentBase: 'dist'
+  },
 
   module: {
     rules: [
@@ -28,11 +34,15 @@ module.exports = {
                 // {'modules': false}にしないとimport文が
                 // BabelによってCommonJSに変換され、
                 // webpackのTree Shaking(デッドコードを除去する機能)が使えない
-                ['env', { 'modules': false }]
+                ['env', { 'modules': false }],
+                // ReactのJSXを解釈
+                'react'
               ]
             }
           }
-        ]
+        ],
+        // node_modulesは除外する
+        exclude: /node_modules/
       }
     ]
   }
