@@ -1,6 +1,12 @@
+// @flow
+
 import React from 'react';
 
-const HelloMessage = (props) => {
+type Props = {
+  message: string
+};
+
+const HelloMessage = (props: Props) => {
   return <h3>{props.message}</h3>
 };
 

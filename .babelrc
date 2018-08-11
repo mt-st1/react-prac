@@ -1,3 +1,6 @@
 {
-  "presets": ["react"]
+  "presets": ["react", "flow"],
+  "plugins": [
+    "transform-flow-strip-types"
+  ]
 }
