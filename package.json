@@ -6,5 +6,9 @@
   "repository": "git@github.com:mt-st1/react-prac.git",
   "author": "mt-st1",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
 }
