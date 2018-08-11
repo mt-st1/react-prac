@@ -1,0 +1,10 @@
+{
+  "name": "react-prac",
+  "version": "1.0.0",
+  "description": "Reactの練習",
+  "main": "index.js",
+  "repository": "git@github.com:mt-st1/react-prac.git",
+  "author": "mt-st1",
+  "license": "MIT",
+  "private": true
+}
